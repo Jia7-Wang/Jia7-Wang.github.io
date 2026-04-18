@@ -1,0 +1,34 @@
+[
+  {
+    "year": "2024",
+    "venue": "TKDE",
+    "title": "AgriKG: A Large-Scale Knowledge Graph for Smart Agriculture with Multi-Modal Entity Alignment",
+    "authors": "Mingyuan Zhang*, Haoran Chen, Sihua Li, et al.",
+    "badges": [
+      { "text": "CCF-A", "highlight": true },
+      { "text": "知识图谱", "highlight": false },
+      { "text": "多模态对齐", "highlight": false }
+    ]
+  },
+  {
+    "year": "2024",
+    "venue": "CVPR",
+    "title": "Panoptic Part Segmentation for Crop Organs via Hierarchical Vision Transformers",
+    "authors": "Yutong Liu, Jianguo Wang, Mingyuan Zhang*, et al.",
+    "badges": [
+      { "text": "CCF-A", "highlight": true },
+      { "text": "计算机视觉", "highlight": false }
+    ]
+  },
+  {
+    "year": "2023",
+    "venue": "KDD",
+    "title": "Causal Inference for Agricultural Yield Prediction with Multi-Source Heterogeneous Data",
+    "authors": "Haoran Chen, Mingyuan Zhang, Sihua Li, et al.",
+    "badges": [
+      { "text": "CCF-A", "highlight": true },
+      { "text": "因果推断", "highlight": false },
+      { "text": "产量预测", "highlight": false }
+    ]
+  }
+]

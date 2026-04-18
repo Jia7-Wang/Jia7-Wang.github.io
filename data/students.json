@@ -1,0 +1,30 @@
+[
+  {
+    "avatar": "<img src=\"img/王家琦.jpg\">",
+    "name": "王家琦",
+    "role": "硕士生 (2026级)",
+    "desc": "研究方向：农业知识图谱构建与推理。在ACL、AAAI等顶会发表论文5篇。",
+    "email": "hrchen@agrimind.edu.cn"
+  },
+  {
+    "avatar": "👩‍🎓",
+    "name": "刘雨桐",
+    "role": "博士生 (2022级)",
+    "desc": "研究方向：农业遥感图像智能解译。获CVPR农业遥感挑战赛冠军。",
+    "email": "ytliu@agrimind.edu.cn"
+  },
+  {
+    "avatar": "👨‍🎓",
+    "name": "赵子轩",
+    "role": "硕士生 (2022级)",
+    "desc": "研究方向：农业机器人视觉导航。主导开发果园巡检机器人系统。",
+    "email": "zxzhao@agrimind.edu.cn"
+  },
+  {
+    "avatar": "👩‍🎓",
+    "name": "孙晓雯",
+    "role": "硕士生 (2023级)",
+    "desc": "研究方向：作物表型高通量分析。开发小麦穗数智能计数系统。",
+    "email": "xwsun@agrimind.edu.cn"
+  }
+]

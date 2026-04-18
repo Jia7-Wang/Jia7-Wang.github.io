@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(npx webpack *)",
+      "Bash(./node_modules/.bin/webpack --config webpack.config.prod.js)"
+    ]
+  }
+}
