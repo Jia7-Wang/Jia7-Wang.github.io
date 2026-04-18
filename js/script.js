@@ -1,14 +1,4 @@
-import researchData from '../data/research.json';
-import teacherData from '../data/teachers.json';
-import studentData from '../data/students.json';
-import undergradData from '../data/undergrads.json';
-import paperData from '../data/papers.json';
-import competitionData from '../data/competitions.json';
-import demoData from '../data/demos.json';
-import contactData from '../data/contact.json';
-import footerLinkData from '../data/footer-links.json';
-
-function renderResearchGrid() {
+function renderResearchGrid(researchData) {
   const grid = document.getElementById('researchGrid');
   grid.innerHTML = '';
   researchData.forEach(item => {
@@ -24,7 +14,7 @@ function renderResearchGrid() {
   });
 }
 
-function renderTeacherGrid() {
+function renderTeacherGrid(teacherData) {
   const grid = document.getElementById('teacherGrid');
   grid.innerHTML = '';
   teacherData.forEach(item => {
@@ -42,7 +32,7 @@ function renderTeacherGrid() {
   });
 }
 
-function renderStudentGrid() {
+function renderStudentGrid(studentData) {
   const grid = document.getElementById('studentGrid');
   grid.innerHTML = '';
   studentData.forEach(item => {
@@ -60,7 +50,7 @@ function renderStudentGrid() {
   });
 }
 
-function renderUndergradGrid() {
+function renderUndergradGrid(undergradData) {
   const grid = document.getElementById('undergradGrid');
   grid.innerHTML = '';
   undergradData.forEach(item => {
@@ -78,7 +68,7 @@ function renderUndergradGrid() {
   });
 }
 
-function renderPaperList() {
+function renderPaperList(paperData) {
   const list = document.getElementById('paperList');
   list.innerHTML = '';
   paperData.forEach(item => {
@@ -101,7 +91,7 @@ function renderPaperList() {
   });
 }
 
-function renderCompetitionGrid() {
+function renderCompetitionGrid(competitionData) {
   const grid = document.getElementById('competitionGrid');
   grid.innerHTML = '';
   competitionData.forEach(item => {
@@ -117,7 +107,7 @@ function renderCompetitionGrid() {
   });
 }
 
-function renderDemoGrid() {
+function renderDemoGrid(demoData) {
   const grid = document.getElementById('demoGrid');
   grid.innerHTML = '';
   demoData.forEach(item => {
@@ -136,7 +126,7 @@ function renderDemoGrid() {
   });
 }
 
-function renderContactGrid() {
+function renderContactGrid(contactData) {
   const grid = document.getElementById('contactGrid');
   grid.innerHTML = '';
   contactData.forEach(item => {
@@ -150,7 +140,7 @@ function renderContactGrid() {
   });
 }
 
-function renderFooterLinks() {
+function renderFooterLinks(footerLinkData) {
   const links = document.getElementById('footerLinks');
   links.innerHTML = '';
   footerLinkData.forEach(item => {
@@ -180,13 +170,25 @@ window.addEventListener('scroll', () => {
 });
 
 window.onload = function () {
-  renderResearchGrid();
-  renderTeacherGrid();
-  renderStudentGrid();
-  renderUndergradGrid();
-  renderPaperList();
-  renderCompetitionGrid();
-  renderDemoGrid();
-  renderContactGrid();
-  renderFooterLinks();
+  Promise.all([
+    fetch('data/research.json').then(r => r.json()),
+    fetch('data/teachers.json').then(r => r.json()),
+    fetch('data/students.json').then(r => r.json()),
+    fetch('data/undergrads.json').then(r => r.json()),
+    fetch('data/papers.json').then(r => r.json()),
+    fetch('data/competitions.json').then(r => r.json()),
+    fetch('data/demos.json').then(r => r.json()),
+    fetch('data/contact.json').then(r => r.json()),
+    fetch('data/footer-links.json').then(r => r.json()),
+  ]).then(([research, teachers, students, undergrads, papers, competitions, demos, contact, footerLinks]) => {
+    renderResearchGrid(research);
+    renderTeacherGrid(teachers);
+    renderStudentGrid(students);
+    renderUndergradGrid(undergrads);
+    renderPaperList(papers);
+    renderCompetitionGrid(competitions);
+    renderDemoGrid(demos);
+    renderContactGrid(contact);
+    renderFooterLinks(footerLinks);
+  });
 };
